@@ -1,0 +1,14 @@
+{
+  "links": [
+    {
+      "title": "MeshCore GitHub",
+      "url": "https://github.com/",
+      "note": "Source code and technical discussion"
+    },
+    {
+      "title": "Join the community",
+      "url": "https://example.com",
+      "note": "Chat, coordination, and announcements"
+    }
+  ]
+}

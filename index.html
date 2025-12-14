@@ -1,35 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>MeshCore Perth</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #0b0f14;
-      color: #e6e6e6;
-      margin: 0;
-      padding: 2rem;
-    }
-    h1 { color: #4da3ff; }
-    .box {
-      border: 1px solid #2a2f3a;
-      padding: 1rem;
-      border-radius: 8px;
-      max-width: 600px;
-    }
-  </style>
+  <title>MeshCore Western Australia</title>
+
+  <meta name="description"
+        content="Community-run MeshCore network for Western Australia." />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="box">
-    <h1>MeshCore Perth</h1>
-    <p>
-      Community off-grid LoRa mesh for Western Australia.
+
+  <header class="wrap">
+    <h1>MeshCore Western Australia</h1>
+    <p class="tagline">
+      Community-run off-grid messaging network for WA.
     </p>
-    <p>
-      🚧 Site under construction, check back later.
+  </header>
+
+  <main class="wrap">
+
+    <section class="card">
+      <h2>Quick links</h2>
+      <p class="muted">
+        Edit <code>data/links.json</code> to update these links.
+      </p>
+      <ul id="links" class="list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Status</h2>
+      <p class="muted">
+        This site is under construction. Community volunteers welcome.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="wrap footer">
+    <p class="muted">
+      Not affiliated with any government or carrier.
+      Built and operated by the community.
     </p>
-  </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
