@@ -75,13 +75,15 @@ code {
 .list a {
   display: block;
   padding: 12px 10px;
-  color: var(--text);
+  color: var(--accent);
   text-decoration: none;
   border-radius: 8px;
+  font-weight: 500;
 }
 
 .list a:hover {
   background: #0f1520;
+  text-decoration: underline;
 }
 
 .list small {

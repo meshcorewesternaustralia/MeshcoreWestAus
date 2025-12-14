@@ -1,14 +1,19 @@
 {
   "links": [
     {
-      "title": "MeshCore GitHub",
-      "url": "https://github.com/",
+      "title": "Getting started with Meshcore",
+      "url": "https://youtu.be/t1qne8uJBAc?si=6YsFrSK5WMW8AKBf",
       "note": "Source code and technical discussion"
     },
     {
-      "title": "Join the community",
-      "url": "https://example.com",
+      "title": "Join the community on Discord",
+      "url": "https://discord.gg/VSKAZ7X7sB",
       "note": "Chat, coordination, and announcements"
+    },
+    {
+      "title": "Current repeater map",
+      "url": "https://analyzer.letsme.sh/map?lat=-31.9403&long=115.967&zoom=8",
+      "note": "Repeater locations and packet logs"
     }
   ]
 }
