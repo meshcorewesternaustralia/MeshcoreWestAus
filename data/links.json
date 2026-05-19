@@ -1,19 +1,34 @@
 {
   "links": [
     {
-      "title": "Getting started with Meshcore",
+      "title": "Official MeshCore website",
+      "url": "https://meshcore.io/",
+      "note": "Official MeshCore website"
+    },    
+    {
+      "title": "Getting started with MeshCore",
       "url": "https://youtu.be/t1qne8uJBAc?si=6YsFrSK5WMW8AKBf",
       "note": "Instruction video by Andy Kirby"
     },
     {
-      "title": "Join the community on Discord",
+      "title": "Join Wa MeshCore community on Discord",
       "url": "https://discord.gg/VSKAZ7X7sB",
       "note": "Chat, coordination, and announcements"
     },
     {
       "title": "Current repeater map",
-      "url": "https://analyzer.letsme.sh/map?lat=-31.9403&long=115.967&zoom=8",
+      "url": "https://analyzer.letsmesh.net/map?lat=-32.11804&long=115.53665&zoom=7",
       "note": "Repeater locations and packet logs"
-    }
+    },
+    {
+      "title": "WA Local MeshMap",
+      "url": "https://meshmap.hayd.io",
+      "note": "WA MeshCore Live map"
+    },
+    {
+      "title": "WA MeshCore CoreScope",
+      "url": "https://corescope.hayd.io",
+      "note": "WA real-time MeshCore network analyzer with live packet, node, and topology visibility"
+    }    
   ]
 }
