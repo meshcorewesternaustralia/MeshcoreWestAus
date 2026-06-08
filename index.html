@@ -34,7 +34,29 @@
   </header>
 
   <main class="wrap">
-
+    <div class="card" style="border-color: #ffb703; background: linear-gradient(145deg, #121824, #191b11);">
+        <h2 style="color: #ffb703; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+            ⚠️ Network Migration: 2-Byte Prefix Change
+        </h2>
+        <p style="margin: 0 0 16px 0; font-weight: 500;">
+            Effective Date: <span style="color: #ffb703;">21st of June 2026</span>
+        </p>
+        
+        <p>
+            As the Meshcore Western Australia network scales, we are transitioning to a 2-byte prefix structure to expand our available address space, improve routing efficiency, and prevent node ID collisions. 
+        </p>
+    
+        <h3 style="margin: 20px 0 8px 0; font-size: 1.1em; color: var(--accent);">Configuring 2-Byte Path Hash</h3>
+        <p class="muted" style="margin-top: 0;">
+            To set the path hash mode to 2 bytes on your repeater, execute the following CLI command:
+        </p>
+        
+        <pre style="margin: 12px 0; background: #0f1520; border: 1px solid var(--line); border-radius: 8px; padding: 14px; overflow-x: auto;"><code style="background: transparent; border: none; padding: 0; font-size: 1.05em; color: #fff; display: block;">set path.hash.mode 1</code></pre>
+    
+        <p class="muted" style="font-size: 0.85em; margin-bottom: 0;">
+            <em>Note: Remember to commit your changes, restart your node, <b>do a time sync</b> and <b>do a flood advert</b> prior to June 21st to ensure uninterrupted connectivity with the WA mesh.</em>
+        </p>
+    </div>
     <!--The current meshcore settings card-->
     <section class="card">
       <h2>Current MeshCore Settings</h2>
