@@ -35,10 +35,32 @@
 
   <main class="wrap">
 
-    <!--The current meshcore settings card-->
+    <section class="card" style="border-color: #ffb703; background: linear-gradient(145deg, #121824, #191b11);">
+      <h2 style="color: #ffb703; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+        ⚠️ Network Migration: 2-Byte Prefix Change
+      </h2>
+      <p style="margin: 0 0 16px 0; font-weight: 500;">
+        Effective Date: <span style="color: #ffb703;">21st of June 2026</span>
+      </p>
+      
+      <p>
+        As the Meshcore Western Australia network scales, we are transitioning to a 2-byte prefix structure to expand our available address space, improve routing efficiency, and prevent node ID collisions. 
+      </p>
+
+      <h3 style="margin: 20px 0 8px 0; font-size: 1.1em; color: var(--accent);">Configuring 2-Byte Path Hash</h3>
+      <p class="muted" style="margin-top: 0;">
+        To set the path hash mode to 2 bytes on your repeater, execute the following CLI command:
+      </p>
+      
+      <pre style="margin: 12px 0; background: #0f1520; border: 1px solid var(--line); border-radius: 8px; padding: 14px; overflow-x: auto;"><code style="background: transparent; border: none; padding: 0; font-size: 1.05em; color: #fff; display: block;">set path.hash.mode 1</code></pre>
+
+      <p class="muted" style="font-size: 0.85em; margin-bottom: 0;">
+        <em>Note: Remember to commit your changes, restart your node, <b>do a time sync</b> and <b>do a flood advert</b> prior to June 21st to ensure uninterrupted connectivity with the WA mesh.</em>
+      </p>
+    </section>
+
     <section class="card">
       <h2>Current MeshCore Settings</h2>
-
       <ul class="list">
         <li>
           <strong>Frequency:</strong> 923.125 MHz
@@ -55,22 +77,52 @@
       </ul>
     </section>
 
+    <section class="card">
+      <h2 style="color: var(--accent); display: flex; align-items: center; gap: 8px;">
+        🔧 Initial Repeater Configuration
+      </h2>
+      <p class="muted" style="margin-top: 0;">
+        Setting up a new Western Australia Meshcore repeater? Connect to your node via your serial console or administration interface and follow this guide to apply optimal network settings.
+      </p>
 
-  <!--The quicklinks card, edit data/links.json to update these links -->
+      <h3 style="margin: 20px 0 6px 0; font-size: 1.05em; color: var(--text);">1. One-Time Node Configuration</h3>
+      <p class="muted" style="font-size: 0.9em; margin: 0 0 8px 0;">
+        Copy and paste this block into your CLI terminal. This enables power management, optimizes beacon intervals, and enforces the required 2-byte path hash mode:
+      </p>
+      <pre style="margin: 8px 0; background: #0f1520; border: 1px solid var(--line); border-radius: 8px; padding: 14px; overflow-x: auto;"><code style="background: transparent; border: none; padding: 0; font-size: 1.05em; color: #fff; display: block; line-height: 1.6;">powersaving on
+set advert.interval 60
+set flood.advert.interval 12
+set path.hash.mode 1
+reboot</code></pre>
+      <p class="muted" style="font-size: 0.85em; margin-top: 4px; margin-bottom: 0;">
+        <em>Note: The <code>reboot</code> command is required to commit these settings to persistent memory. Default parameters (such as 0.5s TX delays, 600s AGC intervals, and hardware RX gain) are omitted here for simplicity as they are active by default in the firmware.</em>
+      </p>
+
+      <h3 style="margin: 24px 0 6px 0; font-size: 1.05em; color: var(--text);">2. Clock Synchronization (Mandatory After Reboot)</h3>
+      <p class="muted" style="font-size: 0.9em; margin: 0 0 8px 0;">
+        Upon rebooting, your hardware clock will reset to firmware defaults. Because network advertisements will fail if your clock is wrong, you must synchronize it to UTC:
+      </p>
+      <pre style="margin: 8px 0; background: #0f1520; border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto;"><code style="background: transparent; border: none; padding: 0; font-size: 1.05em; color: #ffb703; display: block; line-height: 1.5;">clock
+clock sync</code></pre>
+      <p class="muted" style="font-size: 0.85em; margin-top: 4px; margin-bottom: 0;">
+        <em>Verify that the output of <code>clock sync</code> displays the current correct date and time (UTC).</em>
+      </p>
+
+      <h3 style="margin: 24px 0 6px 0; font-size: 1.05em; color: var(--text);">3. Network Verification & Diagnostics</h3>
+      <p class="muted" style="font-size: 0.9em; margin: 0 0 8px 0;">
+        Once configured and synced, broadcast your presence to neighboring nodes and verify your connection to the WA mesh topology:
+      </p>
+      <pre style="margin: 8px 0; background: #0f1520; border: 1px solid var(--line); border-radius: 8px; padding: 12px; overflow-x: auto;"><code style="background: transparent; border: none; padding: 0; font-size: 1.05em; color: var(--accent); display: block; line-height: 1.5;">advert
+advert.local
+discover.neighbors
+neighbors</code></pre>
+    </section>
+
     <section class="card">
       <h2>Quick links</h2>
-      <p class="muted">
-        
-      </p>
       <ul id="links" class="list"></ul>
     </section>
 
-
-
-
-
-
-    <!--The status card-->
     <section class="card">
       <h2>Status</h2>
       <p class="muted">
